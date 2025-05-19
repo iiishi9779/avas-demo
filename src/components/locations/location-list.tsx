@@ -1,19 +1,30 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LocationItem from "./location-item";
 
 import { api } from "@/libs/api";
 
 export default function SuggestionList() {
+  const [locationList, setLocationList] = useState<any[]>([]);
+
   useEffect(() => {
-    api.locations.get();
+    const fetchLocations = async () => {
+      const locations = await api.locations.get();
+      setLocationList(locations.data);
+    };
+    fetchLocations();
   }, []);
 
   return (
     <div className="flex flex-col gap-3">
-      <LocationItem title="Work" subtitle="1455 Market St" />
-      <LocationItem title="Home" subtitle="903 Sunrose Terr" />
+      {locationList.map((location, i) => (
+        <LocationItem
+          key={i}
+          title={location.title}
+          subtitle={location.location}
+        />
+      ))}
     </div>
   );
 }

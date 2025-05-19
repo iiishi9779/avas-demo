@@ -7,7 +7,7 @@ export default function LocationItem({ title, subtitle }) {
         <HomeIcon className="size-6 text-stone-700" />
       </div>
       <div>
-        <div className="font-medium">{title}</div>
+        <div className="font-medium capitalize">{title}</div>
         <div className="text-stone-500">{subtitle}</div>
       </div>
     </div>

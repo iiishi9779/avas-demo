@@ -6,7 +6,7 @@ import SearchBar from "@/components/search-bar";
 
 export default function Home() {
   return (
-    <div className="bg-stone-50 grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex px-8 flex-col gap-[32px] row-start-2">
         <header className="flex gap-4">
           <Image
