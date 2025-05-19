@@ -9,19 +9,19 @@ export default function NavigationBar() {
   return (
     <div className="row-start-3 flex gap-12 flex-wrap items-center justify-center">
       <div className="flex flex-col gap-1 items-center">
-        <HomeIcon className="size-8 text-gray-700" />
+        <HomeIcon className="size-8 text-stone-700" />
         <div className="text-sm">Home</div>
       </div>
       <div className="flex flex-col gap-1 items-center">
-        <Squares2X2Icon className="size-8 text-gray-700" />
+        <Squares2X2Icon className="size-8 text-stone-700" />
         <div className="text-sm">Services</div>
       </div>
       <div className="flex flex-col gap-1 items-center">
-        <ClockIcon className="size-8 text-gray-700" />
+        <ClockIcon className="size-8 text-stone-700" />
         <div className="text-sm">Activity</div>
       </div>
       <div className="flex flex-col gap-1 items-center">
-        <UserIcon className="size-8 text-gray-700" />
+        <UserIcon className="size-8 text-stone-700" />
         <div className="text-sm">Account</div>
       </div>
     </div>

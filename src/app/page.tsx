@@ -1,16 +1,12 @@
 import Image from "next/image";
-import SuggestionItem from "@/components/suggestion-item";
-import LocationItem from "@/components/location-item";
+import LocationList from "@/components/locations/location-list";
+import SuggestionList from "@/components/suggestions/suggestion-list";
 import NavigationBar from "@/components/navigation-bar";
-import {
-  MagnifyingGlassIcon,
-  ClockIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/solid";
+import SearchBar from "@/components/search-bar";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-stone-50 grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex px-8 flex-col gap-[32px] row-start-2">
         <header className="flex gap-4">
           <Image
@@ -24,37 +20,18 @@ export default function Home() {
           <div className="text-3xl font-bold">Avas App</div>
         </header>
 
-        <div className="flex gap-4 bg-gray-100 rounded-full p-4 items-center">
-          <MagnifyingGlassIcon className="size-8 text-gray-500" />
-          <input
-            className="flex-1 placeholder-gray-500 text-xl font-medium"
-            type="text"
-            placeholder="Where to?"
-          />
-          <div className="px-2 py-1 flex items-center gap-1 bg-white rounded-full">
-            <ClockIcon className="size-5 text-gray-800" />
-            <span className="font-medium">Now</span>
-          </div>
-          <ChevronRightIcon className="size-5 text-gray-800" />
-        </div>
+        <SearchBar />
 
-        <div className="flex flex-col gap-3">
-          <LocationItem title="Work" subtitle="1455 Market St" />
-          <LocationItem title="Home" subtitle="903 Sunrose Terr" />
-        </div>
+        <LocationList />
 
         <div className="flex justify-between">
-          <h2 className="text-xl font-medium text-gray-700">Suggestions</h2>
-          <div className="text-gray-700">See all</div>
-        </div>
-        <div className="flex gap-4">
-          <SuggestionItem title="ride" imgSrc="/globe.svg" />
-          <SuggestionItem title="package" imgSrc="/globe.svg" />
-          <SuggestionItem title="reserve" imgSrc="/globe.svg" />
-          <SuggestionItem title="rent" imgSrc="/globe.svg" />
+          <h2 className="text-xl font-semibold text-stone-700">Suggestions</h2>
+          <div className="text-stone-700">See all</div>
         </div>
 
-        <h2 className="text-xl font-medium text-gray-700">
+        <SuggestionList />
+
+        <h2 className="text-xl font-semibold text-stone-700">
           Ways to plan with Avas
         </h2>
         {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
