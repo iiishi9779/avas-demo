@@ -1,28 +1,12 @@
-import cors, { HTTPMethod } from "@elysiajs/cors";
 import Elysia from "elysia";
+import cors, { HTTPMethod } from "@elysiajs/cors";
 import swagger from "@elysiajs/swagger";
 import { Logestic } from "logestic";
+import { getLocations, getSuggestions } from "./controllers";
 
 const appRoutes = new Elysia({ prefix: "/api" })
-  .get("/locations", () => [
-    { title: "work", location: "1455 Market St" },
-    { title: "home", location: "903 Sunrose Terr" },
-  ])
-  .get("/suggestions", () => [
-    { title: "ride", imgSrc: "./globe.svg" },
-    { title: "reserve", imgSrc: "./globe.svg" },
-    { title: "package", imgSrc: "./globe.svg" },
-    { title: "rent", imgSrc: "./globe.svg" },
-  ]);
-
-const corsConfig = {
-  origin: "*",
-  methods: ["GET"] as HTTPMethod[],
-  allowedHeaders: "*",
-  exposedHeaders: "*",
-  maxAge: 5,
-  credentials: true,
-};
+  .get("/locations", () => getLocations)
+  .get("/suggestions", () => getSuggestions);
 
 const swaggerConfig = {
   documentation: {
@@ -32,6 +16,15 @@ const swaggerConfig = {
       version: "1.0.0",
     },
   },
+};
+
+const corsConfig = {
+  origin: "*",
+  methods: ["GET"] as HTTPMethod[],
+  allowedHeaders: "*",
+  exposedHeaders: "*",
+  maxAge: 5,
+  credentials: true,
 };
 
 const app = appRoutes

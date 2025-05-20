@@ -6,15 +6,15 @@ import SearchBar from "@/components/search-bar";
 
 export default function Home() {
   return (
-    <div className="rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="md:rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex px-8 flex-col gap-[32px] row-start-2">
         <header className="flex gap-4">
           <Image
             className="dark:invert"
-            src="/next.svg"
-            alt="Next.js logo"
-            width={80}
-            height={80}
+            src="/logo.png"
+            alt="avas demo app logo"
+            width={40}
+            height={40}
             priority
           />
           <div className="text-3xl font-bold">Avas App</div>
@@ -34,6 +34,60 @@ export default function Home() {
         <h2 className="text-xl font-semibold text-stone-700">
           Ways to plan with Avas
         </h2>
+
+        <div className="grid grid-flow-col gap-4">
+          <div className="relative h-64">
+            <Image
+              className="bg-cover"
+              src="/img/shopping.jpg"
+              alt="shopping"
+              sizes="100vh"
+              fill
+              objectFit="fill"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              className="bg-cover"
+              src="/img/shopping.jpg"
+              alt="shopping"
+              sizes="100vh"
+              fill
+              objectFit="fill"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              className="bg-cover"
+              src="/img/shopping.jpg"
+              alt="shopping"
+              sizes="100vh"
+              fill
+              objectFit="fill"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              className="bg-cover"
+              src="/img/shopping.jpg"
+              alt="shopping"
+              sizes="100vh"
+              fill
+              objectFit="fill"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              className="bg-cover"
+              src="/img/shopping.jpg"
+              alt="shopping"
+              sizes="100vh"
+              fill
+              objectFit="fill"
+            />
+          </div>
+        </div>
+
         {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
