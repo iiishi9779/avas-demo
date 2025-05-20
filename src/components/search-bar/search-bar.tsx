@@ -6,6 +6,8 @@ import {
   ChevronRightIcon,
 } from "@heroicons/react/24/solid";
 import { useRef } from "react";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+import { TimeSelectorSheet } from "./time-selector";
 
 export default function SearchBar() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -30,10 +32,19 @@ export default function SearchBar() {
           onClick={(e) => e.stopPropagation()}
         />
       </div>
-      <div className="inline-flex px-2 py-1 items-center gap-1 bg-stone-50 rounded-full border border-stone-200 shadow-xs shadow-stone-300">
-        <ClockIcon className="size-5 text-stone-600" />
-        <span className="font-medium text-stone-600 pr-1 text-sm">Now</span>
-      </div>
+
+      <Sheet>
+        <SheetTrigger asChild>
+          <div className="inline-flex px-2 py-1 items-center gap-1 bg-stone-50 rounded-full border border-stone-200 shadow-xs shadow-stone-300">
+            <ClockIcon className="size-5 text-stone-600" />
+            <button className="font-medium text-stone-600 pr-1 text-sm">
+              Now
+            </button>
+          </div>
+        </SheetTrigger>
+        <TimeSelectorSheet />
+      </Sheet>
+
       <ChevronRightIcon className="size-5 text-stone-800" />
     </div>
   );

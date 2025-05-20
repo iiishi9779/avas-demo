@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import SuggestionList from "@/components/suggestions/suggestion-list";
 import Loading from "@/components/suggestions/suggestions-loading";
-import { api } from "@/libs/api";
+import { api } from "@/lib/api";
 
 async function SuggestionListWithData() {
   const { data } = await api.suggestions.get();

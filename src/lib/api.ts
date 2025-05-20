@@ -6,3 +6,5 @@ export const api = treaty<API>(
     ? `http://localhost:${process.env.PORT ?? 3000}`
     : window.location.origin,
 ).api;
+
+export type * from "@/app/api";

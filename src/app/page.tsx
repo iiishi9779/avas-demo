@@ -1,13 +1,13 @@
 import Image from "next/image";
 import BottomNavigation from "@/components/bottom-navigation";
-import SearchBar from "@/components/search-bar";
+import SearchBar from "@/components/search-bar/search-bar";
 import SavedLocationsArea from "@/components/saved-locations/saved-locations-area";
 import SuggestionsArea from "@/components/suggestions/suggestions-area";
 import PlanningTipsArea from "@/components/planning-tips/planning-tips-area";
 
 export default async function Home() {
   return (
-    <div className="">
+    <div>
       <main className="flex px-8 gap-6 flex-col md:rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto min-h-screen pb-20 font-[family-name:var(--font-geist-sans)] relative h-screen w-full overflow-hidden">
         <header className="flex gap-1 mt-6 items-center">
           <Image

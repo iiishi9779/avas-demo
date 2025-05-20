@@ -1,6 +1,11 @@
 import { HomeIcon } from "@heroicons/react/24/solid";
 
-export default function LocationItem({ title, subtitle }) {
+type LocationItem = {
+  title: string;
+  subtitle: string;
+};
+
+export default function LocationItem({ title, subtitle }: LocationItem) {
   return (
     <div className="flex gap-3 items-center">
       <div className="p-2 rounded-full bg-stone-200">

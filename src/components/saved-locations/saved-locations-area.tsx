@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import SavedLocationList from "@/components/saved-locations/saved-location-list";
 import Loading from "@/components/saved-locations/saved-location-loading";
-import { api } from "@/libs/api";
+import { api } from "@/lib/api";
 
 async function SavedLocationListWithData() {
   const { data } = await api.locations.get();

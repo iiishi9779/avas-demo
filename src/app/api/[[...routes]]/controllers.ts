@@ -13,3 +13,6 @@ export const getSuggestions = () => {
     { title: "rent", imgSrc: "bike" },
   ];
 };
+
+export type LocationList = ReturnType<typeof getLocations>;
+export type SuggestionList = ReturnType<typeof getSuggestions>;
