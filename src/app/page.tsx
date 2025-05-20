@@ -1,10 +1,11 @@
 import Image from "next/image";
-import LocationList from "@/components/locations/location-list";
-import SuggestionList from "@/components/suggestions/suggestion-list";
 import NavigationBar from "@/components/navigation-bar";
 import SearchBar from "@/components/search-bar";
+import SavedLocationsArea from "@/components/saved-locations/saved-locations-area";
+import SuggestionsArea from "@/components/suggestions/suggestions-area";
+import PlanningTipsArea from "@/components/planning-tips/planning-tips-area";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="md:rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto grid grid-rows-[20px_1fr_20px] min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex px-8 flex-col gap-[32px] row-start-2">
@@ -21,72 +22,9 @@ export default function Home() {
         </header>
 
         <SearchBar />
-
-        <LocationList />
-
-        <div className="flex justify-between">
-          <h2 className="text-xl font-semibold text-stone-700">Suggestions</h2>
-          <div className="text-stone-700">See all</div>
-        </div>
-
-        <SuggestionList />
-
-        <h2 className="text-xl font-semibold text-stone-700">
-          Ways to plan with Avas
-        </h2>
-
-        <div className="grid grid-flow-col gap-4">
-          <div className="relative h-64">
-            <Image
-              className="bg-cover"
-              src="/img/shopping.jpg"
-              alt="shopping"
-              sizes="100vh"
-              fill
-              objectFit="fill"
-            />
-          </div>
-          <div className="relative h-64">
-            <Image
-              className="bg-cover"
-              src="/img/shopping.jpg"
-              alt="shopping"
-              sizes="100vh"
-              fill
-              objectFit="fill"
-            />
-          </div>
-          <div className="relative h-64">
-            <Image
-              className="bg-cover"
-              src="/img/shopping.jpg"
-              alt="shopping"
-              sizes="100vh"
-              fill
-              objectFit="fill"
-            />
-          </div>
-          <div className="relative h-64">
-            <Image
-              className="bg-cover"
-              src="/img/shopping.jpg"
-              alt="shopping"
-              sizes="100vh"
-              fill
-              objectFit="fill"
-            />
-          </div>
-          <div className="relative h-64">
-            <Image
-              className="bg-cover"
-              src="/img/shopping.jpg"
-              alt="shopping"
-              sizes="100vh"
-              fill
-              objectFit="fill"
-            />
-          </div>
-        </div>
+        <SavedLocationsArea />
+        <SuggestionsArea />
+        <PlanningTipsArea />
 
         {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a

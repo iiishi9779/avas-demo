@@ -1,27 +1,11 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import { api } from "@/libs/api";
 import SuggestionItem from "./suggestion-item";
 
-export default function SuggestionList() {
-  const [suggestionList, setSuggestionList] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchSuggestions = async () => {
-      const suggestions = await api.suggestions.get();
-      setSuggestionList(suggestions.data);
-    };
-    fetchSuggestions();
-  }, []);
+export default function SuggestionList({ suggestions }: any[]) {
   return (
     <div className="flex gap-4">
-      {suggestionList.map((suggestion, i) => (
-        <SuggestionItem
-          key={i}
-          title={suggestion.title}
-          imgSrc={suggestion.imgSrc}
-        />
+      {suggestions.map((s, i) => (
+        <SuggestionItem key={i} title={s.title} imgSrc={s.imgSrc} />
       ))}
     </div>
   );
