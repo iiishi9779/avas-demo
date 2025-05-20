@@ -7,54 +7,19 @@ export default function PlanningTipsArea() {
 
       <div className="grid grid-flow-col gap-4">
         <div className="relative h-64">
-          <Image
-            className="bg-cover"
-            src="/img/shopping.jpg"
-            alt="shopping"
-            sizes="100vh"
-            fill
-            objectFit="fill"
-          />
+          <Image className="bg-cover" src="/img/shopping.jpg" alt="shopping" />
         </div>
         <div className="relative h-64">
-          <Image
-            className="bg-cover"
-            src="/img/shopping.jpg"
-            alt="shopping"
-            sizes="100vh"
-            fill
-            objectFit="fill"
-          />
+          <Image className="bg-cover" src="/img/shopping.jpg" alt="shopping" />
         </div>
         <div className="relative h-64">
-          <Image
-            className="bg-cover"
-            src="/img/shopping.jpg"
-            alt="shopping"
-            sizes="100vh"
-            fill
-            objectFit="fill"
-          />
+          <Image className="bg-cover" src="/img/shopping.jpg" alt="shopping" />
         </div>
         <div className="relative h-64">
-          <Image
-            className="bg-cover"
-            src="/img/shopping.jpg"
-            alt="shopping"
-            sizes="100vh"
-            fill
-            objectFit="fill"
-          />
+          <Image className="bg-cover" src="/img/shopping.jpg" alt="shopping" />
         </div>
         <div className="relative h-64">
-          <Image
-            className="bg-cover"
-            src="/img/shopping.jpg"
-            alt="shopping"
-            sizes="100vh"
-            fill
-            objectFit="fill"
-          />
+          <Image className="bg-cover" src="/img/shopping.jpg" alt="shopping" />
         </div>
       </div>
     </div>
