@@ -15,11 +15,8 @@ To get started, follow these steps:
    bun install
    ```
 
-3. **Configure Environment Variables**:
 
-   `.env` comes readily configured; feel free to update/fill in the necessary variables.
-
-4. **Run the Development Server**:
+3. **Run the Development Server**:
 
    ```bash
    bun --bun run dev

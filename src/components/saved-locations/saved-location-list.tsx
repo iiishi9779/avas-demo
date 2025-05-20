@@ -11,7 +11,12 @@ export default function LocationList({
   return (
     <div className="flex flex-col gap-3">
       {locations?.map((l, i) => (
-        <SavedLocationItem key={i} title={l.title} subtitle={l.location} />
+        <SavedLocationItem
+          key={i}
+          title={l.title}
+          subtitle={l.location}
+          icon={l.icon}
+        />
       ))}
     </div>
   );
