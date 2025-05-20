@@ -1,7 +1,7 @@
 export const getLocations = () => {
   return [
-    { title: "work", location: "1455 Market St", icon: "home" },
-    { title: "home", location: "903 Sunrose Terr", icon: "office" },
+    { title: "home", location: "1455 Market St", icon: "home" },
+    { title: "work", location: "903 Sunrose Terr", icon: "office" },
   ];
 };
 
