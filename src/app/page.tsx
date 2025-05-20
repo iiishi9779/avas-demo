@@ -9,13 +9,13 @@ export default async function Home() {
   return (
     <div className="">
       <main className="flex px-8 gap-6 flex-col md:rounded-3xl border border-stone-200 bg-stone-50 max-w-xl mx-auto min-h-screen pb-20 font-[family-name:var(--font-geist-sans)] relative h-screen w-full overflow-hidden">
-        <header className="flex gap-4 mt-6">
+        <header className="flex gap-1 mt-6 items-center">
           <Image
             className="dark:invert"
             src="/logo.png"
             alt="avas demo app logo"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             priority
           />
           <div className="text-3xl font-bold">Avas App</div>
@@ -24,7 +24,7 @@ export default async function Home() {
         <div className="flex flex-col overflow-y-auto gap-6 -mx-8 px-8 pb-12">
           <SavedLocationsArea />
           <SuggestionsArea />
-          {/* <PlanningTipsArea /> */}
+          <PlanningTipsArea />
 
           {/* <div className="flex gap-4 items-center flex-col sm:flex-row">
             <a

@@ -8,7 +8,7 @@ import {
 import { useRef } from "react";
 
 export default function SearchBar() {
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFocus = () => {
     inputRef.current?.focus();
