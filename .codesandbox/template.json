@@ -1,0 +1,7 @@
+{
+  "title": "Avas Demo",
+  "description": "coding challange",
+  "iconUrl": "https://raw.githubusercontent.com/codesandbox/sandbox-templates/main/bun/.codesandbox/icon.png",
+  "tags": ["bun", "javascript", "typescript", "playground"],
+  "published": true
+}
